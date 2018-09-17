@@ -38,21 +38,19 @@ export default {
 如果配置了 `routes`，则约定式路由会不生效。
 :::
 
-### disableRedirectHoist
-
-* 类型：`Boolean`
-* 默认值：`false`
-
-禁用 redirect 上提。
-
-出于一些原因的考虑，我们在处理路由时把所有 redirect 声明提到路由最前面进行匹配，但这导致了一些问题，所以添加了这个配置项，禁用 redirect 上提。
-
 ### history
 
 * 类型：`String`
 * 默认值：`browser`
 
 如需切换 history 方式为 hash（默认是 browser history），配置 `history: 'hash'`。
+
+### hash
+
+* 类型：`Boolean`
+* 默认值：`false`
+
+指定输出文件名是否加入hash值，在文件内容变化后，确保浏览器能够使用新的文件。
 
 ### outputPath
 
@@ -81,13 +79,6 @@ export default {
 * 默认值：`false`
 
 值为 `true` 时使用 HTML 里指定的 `window.publicPath`。
-
-### hash
-
-* Type: `Boolean`
-* Default: `false`
-
-是否开启 hash 文件后缀。
 
 ### context
 
